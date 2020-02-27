@@ -6,46 +6,34 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-
   margin: auto;
   text-align: center;
   height: 800px;
-  padding: 40px;
-  vertical-align: middle;
+  padding: 60px;
 
   background-repeat: no-repeat;
   background-position: center;
-  animation: rotateBackground 10s linear infinite;
+  animation: rotateBackground 10s ease infinite;
 }
 
-@keyframes rotateBackground {
-  0% {
-    transform: rotation(0deg);
-  }
-  25% {
-    transform: rotation(45deg);
-  }
-  75% {
-    transform: rotation(-45deg);
-  }
-  100% {
-    transform: rotation(-45deg);
-  }
-}
+/* .header:;
+} */
 
 .title {
   font-size: 36px !important;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .heavy {
   font-weight: 700;
-  color: black;
+  color: #3c3939;
   font-size: 24px;
 }
 
 .light {
-  font-weight: 300;
-  color: gray;
+  font-weight: 400;
+  color: #8c8c8c;
   font-size: 24px;
 }
 
