@@ -1,13 +1,40 @@
 .App {
   background-color: #fffffa;
-
 }
 
 .header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
   margin: auto;
   text-align: center;
-  height: 400px;
+  height: 800px;
   padding: 40px;
+  vertical-align: middle;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: rotateBackground 10s linear infinite;
+}
+
+@keyframes rotateBackground {
+  0% {
+    transform: rotation(0deg);
+  }
+  25% {
+    transform: rotation(45deg);
+  }
+  75% {
+    transform: rotation(-45deg);
+  }
+  100% {
+    transform: rotation(-45deg);
+  }
+}
+
+.title {
+  font-size: 36px !important;
 }
 
 .heavy {
@@ -20,4 +47,82 @@
   font-weight: 300;
   color: gray;
   font-size: 24px;
+}
+
+/* Triangle */
+.triangle {
+  stroke: black;
+  stroke-width: 8px;
+
+  fill: darkgrey;
+  animation: changeColor 4s infinite;
+}
+
+.tri-container {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+@keyframes changeColor {
+  0% {
+    fill: lightsalmon;
+    stroke: crimson;
+  }
+  25% {
+    fill: plum;
+    stroke: darkorchid;
+  }
+  50% {
+    fill: lightblue;
+    stroke: darkcyan;
+  }
+  75% {
+    fill: plum;
+    stroke: darkorchid;
+  }
+  100% {
+    fill: lightsalmon;
+    stroke: crimson;
+  }
+}
+
+/* Square */
+.square {
+  stroke: bisque;
+  stroke-width: 4px;
+  fill: white;
+
+  animation: resizeWidth 6s ease-in-out infinite;
+}
+
+@keyframes resizeWidth {
+  0% {
+    transform: scale(1, 1);
+  }
+  33% {
+    transform: scale(1.25, 0.75);
+  }
+  66% {
+    transform: scale(0.75, 1.25);
+  }
+}
+
+/* Circle */
+
+.circle-container {
+  margin: auto;
+}
+
+.circle {
+  stroke: white;
+  stroke-width: 1px;
+  stroke-dasharray: 25;
+  animation: dash 4s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
 }

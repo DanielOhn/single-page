@@ -1,0 +1,36 @@
+.section {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding: 20px;
+  height: 600px;
+}
+
+.left {
+  text-align: left;
+  flex-flow: row-reverse nowrap;
+  background-color: #000000;
+}
+
+.right {
+  text-align: right;
+  flex-flow: row nowrap;
+}
+
+.lite {
+  color: white;
+}
+
+.content {
+  width: 400px;
+  margin: auto;
+}
+
+.image {
+  width: 400px;
+  margin: auto;
+}
+
+img {
+  border-radius: 12px;
+}
