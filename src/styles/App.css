@@ -1,3 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
 .App {
   background-color: #fffffa;
 }
@@ -9,7 +14,7 @@
   margin: auto;
   text-align: center;
   height: 800px;
-  padding: 60px;
+  padding: 30px;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -47,7 +52,7 @@
 }
 
 .tri-container {
-  width: 500px;
+  /* width: ; */
   height: 500px;
   margin: auto;
 }
@@ -112,5 +117,36 @@
 @keyframes dash {
   to {
     stroke-dashoffset: 1000;
+  }
+}
+
+/* Shapes */
+
+.shape-container {
+  margin: auto;
+  position: absolute;
+  z-index: 1;
+  height: inherit;
+  width: 90%;
+}
+
+.shape {
+  stroke: lightgreen;
+  stroke-width: 4px;
+  fill: none;
+  animation: fallingLeft 10s linear infinite;
+}
+
+@keyframes fallingLeft {
+  to {
+    transform: translate(50%, 90%) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fallingRight {
+  to {
+    transform: translate(70%, 90%) rotate(180deg);
+    opacity: 0;
   }
 }
